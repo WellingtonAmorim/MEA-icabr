@@ -1,0 +1,631 @@
+	
+Label Root
+{
+	Son: FARM
+	Label FARM
+	{
+		Var: C
+		Var: gmean
+		Var: A
+		Param: IN_S
+		Var: Af
+		Var: az
+		Var: g
+		Var: I
+		Var: p
+		Var: PROB_IN
+		Var: T
+		Var: Z
+		Var: z
+		Param: a
+		Param: b
+		Param: CO
+		Param: Dp
+		Param: E
+		Param: f
+		Param: IM_S
+		Param: Inn
+		Param: price
+		Param: r
+		Param: t
+		Param: x
+		Var: PROB_IM
+		Param: A0
+		Var: REC
+		Var: Im
+		Var: In
+		Param: s
+		Var: TESTE
+		Var: rim
+		Var: Am
+		Var: rin
+		Var: AmFarm
+		Var: TESTE1
+		Param: alpha
+		Param: beta
+		Var: RECIMIT
+		Var: RECINV
+		Var: AM
+
+	}
+
+
+}
+
+
+DATA
+
+Object: Root C	1
+
+Object: FARM C	100
+Var: C 0 s + n n
+Var: gmean 1 s + n n	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Var: A 5 s + n n	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500	500
+Param: IN_S 0 n + n n	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4
+Var: Af 0 n + n n
+Var: az 0 n + n n
+Var: g 1 s + n p	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Var: I 1 s + n n	240.643101289034	450.502576998374	490.660331337269	266.310212894811	292.450115152101	364.166178910356	256.514592814154	497.864390575342	498.938397664403	490.308481103151	417.751688963567	494.332907533082	232.958525253262	439.431757024865	289.108834867385	201.435045325795	233.739354816854	391.929007129446	463.529193619653	351.098803311551	439.378584548068	308.388200404754	263.57729971752	404.40786156808	319.621555973687	422.194173402926	342.42760418517	326.626304331624	252.159551600144	290.573938063196	439.183974571483	294.965133445698	461.72864602019	244.734192922211	498.220548296613	446.570979442223	237.55482936009	429.125003771654	347.176711886438	399.081656152926	237.7689900416	263.062722355702	215.364927735565	210.93237547636	322.619348288528	337.396746628668	346.270678060519	438.192491464758	476.262437345649	442.25930763092	411.732275500616	200.845529768595	413.211162527215	393.188286956582	336.809847349231	432.175138674097	372.126399978977	463.027224527233	442.452647042363	205.332168672966	446.373797470094	446.252235252533	482.022208639371	323.799954473442	326.949534930119	374.287003299172	247.417275366412	428.519364106838	269.046819360179	442.920364620456	496.556480241058	299.734484701484	289.949511746942	204.061737999566	265.171351837641	472.209415329852	454.540337589332	486.505272047437	433.669313016537	496.237888057247	220.27861434163	438.079274457239	378.35106835132	419.839617578526	408.569865132486	403.945937213896	317.696140759429	368.46723270745	262.420417115589	358.211437582585	321.26255543501	305.828722430436	377.847163555967	306.903548174014	489.489911631728	246.331525230541	318.472463188378	316.188771543283	418.086416484688	316.570942243826
+Var: p 1 s + n n	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300
+Var: PROB_IN 0 s + n n
+Var: T 0 s + n n
+Var: Z 1 s + n n	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350
+Var: z 0 n + n n
+Param: a 0 n + n n	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2
+Param: b 0 n + n n	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8
+Param: CO 0 s + n n	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330	330
+Param: Dp 0 n + n n	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25
+Param: E 0 n + n n	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350
+Param: f 0 s + n n	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2
+Param: IM_S 0 n + n n	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6
+Param: Inn 0 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Param: price 0 n + n n	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21
+Param: r 0 s + n n	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Param: t 0 n + n n	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7	0.7
+Param: x 0 n + n n	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350	350
+Var: PROB_IM 0 s + n n
+Param: A0 0 n + n n	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000
+Var: REC 1 s + n n	675.017867266957	621.368351049032	553.735038142952	659.393818327501	557.56945105834	717.407916487659	556.758913653786	665.317012302691	557.549387867881	630.611954798156	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957	675.017867266957
+Var: Im 1 s + n n	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Var: In 1 s + n n	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Param: s 0 s + n n	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03
+Var: TESTE 0 s + n n
+Var: rim 1 s + n n	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Var: Am 0 s + n n
+Var: rin 1 s + n n	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Var: AmFarm 0 s + n n
+Var: TESTE1 0 s + n n
+Param: alpha 0 n + n n	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1
+Param: beta 0 n + n n	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05
+Var: RECIMIT 0 n + n n
+Var: RECINV 0 n + n n
+Var: AM 0 s + n n
+
+SIM_NUM 1
+SEED 1
+MAX_STEP 50
+EQUATION fun_newmodel.cpp
+MODELREPORT report_Sim1.html
+
+DESCRIPTION
+
+Object_Root
+
+END_DESCRIPTION
+
+Object_FARM
+
+END_DESCRIPTION
+
+Variable_C
+Cost function
+END_DESCRIPTION
+
+Variable_gmean
+Farms AC average
+_INIT_
+All 100 instances equal to 0.3
+END_DESCRIPTION
+
+Variable_A
+Produtividade
+ 
+A produtividade da área plantada "A" depende do parâmetro "a" que representa a velocidade do aprendizado (ou velocidade de assimilação de conhecimento tecnológico. Quanto menor for este parâmetro, mais rápido será o aprendizado e maior a produtividade.
+Produtividade
+ 
+A produtividade da área plantada "A" depende do parâmetro "a" que representa a velocidade do aprendizado (ou velocidade de assimilação de conhecimento tecnológico. Quanto menor for este parâmetro, mais rápido será o aprendizado e maior a produtividade.
+'A' appears in the equation for: A, p, I
+_INIT_
+All 1000 instances equal to 500
+END_DESCRIPTION
+
+Parameter_IN_S
+
+_INIT_
+All 10 instances equal to 0.4
+END_DESCRIPTION
+
+Variable_Af
+Produtividade Final
+ 
+"Af" define o aumento ou decréscimo da produtividade. Determina o limite da produtividade no final de cada simulação. O parâmetro "x" multiplica o grau de conhecimento tecnológico "T" e soma à produtividade final no tempo zero "A0" para cada agricultor.
+END_DESCRIPTION
+
+Variable_az
+Average z
+END_DESCRIPTION
+
+Variable_g
+Capacidade de Absorção futura (Inn = 0 IMITATOR, Inn = 1 INNOVATOR)
+É função da capacidade de absorção passada ("g", 1), do investimento realizado "I", de um parâmetro "b" que especifica a complexidade do conhecimento assimilado e da depreciação da capacidade de absorção "Dp"
+_INIT_
+All 100 instances equal to 0.3
+END_DESCRIPTION
+
+Variable_I
+Investment function
+_INIT_
+All 1000 instances drawn from uniform distribution between 200 and 500
+END_DESCRIPTION
+
+Variable_p
+Profit function
+_INIT_
+All 100 instances equal to 300
+END_DESCRIPTION
+
+Variable_PROB_IN
+Sucess Probability of Innovation
+END_DESCRIPTION
+
+Variable_T
+Grau de conhecimento tecnológico "T" 
+ É função do estoque de conhecimento comparado à média do mercado. A taxa de crescimento do estoque de conhecimento "z" é dada pela variação do conhecimento no período presente e o anterior (derivada do estoque de conhecimento no tempo)
+END_DESCRIPTION
+
+Variable_Z
+Estoque de conhecimento
+ 
+O estoque de conhecimento "Z" é função do investimento do agricultor "I", da sua capacidade de absorção "g", do efeito spillover "t", do total de investimento realizado por outros produtores "SUM("I") e do conhecimento externo "E"
+_INIT_
+All 100 instances equal to 350
+END_DESCRIPTION
+
+Variable_z
+Knowledge increase rate
+END_DESCRIPTION
+
+Parameter_a
+
+_INIT_
+All 10 instances equal to 0.2
+END_DESCRIPTION
+
+Parameter_b
+
+_INIT_
+All 100 instances equal to 0.8
+END_DESCRIPTION
+
+Parameter_CO
+
+_INIT_
+All 1 instances equal to 330
+END_DESCRIPTION
+
+Parameter_Dp
+
+_INIT_
+All 100 instances equal to 0.25
+END_DESCRIPTION
+
+Parameter_E
+
+_INIT_
+All 1 instances equal to 350
+END_DESCRIPTION
+
+Parameter_f
+
+_INIT_
+All 10 instances equal to 0.2
+END_DESCRIPTION
+
+Parameter_IM_S
+
+_INIT_
+All 10 instances equal to 0.6
+END_DESCRIPTION
+
+Parameter_Inn
+
+_INIT_
+All 100 instances equal to 0
+END_DESCRIPTION
+
+Parameter_price
+
+_INIT_
+All 1 instances equal to 0.21
+END_DESCRIPTION
+
+Parameter_r
+
+_INIT_
+All 10 instances equal to 0.5
+END_DESCRIPTION
+
+Parameter_t
+
+_INIT_
+All 10 instances equal to 0.7
+END_DESCRIPTION
+
+Parameter_x
+
+_INIT_
+All 1 instances equal to 350
+END_DESCRIPTION
+
+Variable_PROB_IM
+Sucess Probability of Imitation
+END_DESCRIPTION
+
+Parameter_A0
+
+_INIT_
+All 10 instances equal to 3000
+END_DESCRIPTION
+
+Variable_REC
+
+_INIT_
+All 10 instances equal to 627
+END_DESCRIPTION
+
+Variable_Im
+Investment function imitation
+_INIT_
+All 100 instances equal to 0.3
+END_DESCRIPTION
+
+Variable_In
+Investment function inovation
+_INIT_
+All 100 instances equal to 0.3
+END_DESCRIPTION
+
+Parameter_s
+
+_INIT_
+All 10 instances equal to 0.03
+END_DESCRIPTION
+
+Variable_TESTE
+
+END_DESCRIPTION
+
+Variable_rim
+
+_INIT_
+All 100 instances equal to 0.5
+END_DESCRIPTION
+
+Variable_Am
+Farms AC average
+END_DESCRIPTION
+
+Variable_rin
+
+_INIT_
+All 100 instances equal to 0.5
+END_DESCRIPTION
+
+Variable_AmFarm
+
+END_DESCRIPTION
+
+Variable_TESTE1
+
+END_DESCRIPTION
+
+Parameter_alpha
+
+_INIT_
+All 100 instances equal to 0.1
+END_DESCRIPTION
+
+Parameter_beta
+
+_INIT_
+All 100 instances equal to 0.05
+END_DESCRIPTION
+
+Variable_RECIMIT
+
+END_DESCRIPTION
+
+Variable_RECINV
+
+END_DESCRIPTION
+
+Variable_AM
+
+END_DESCRIPTION
+
+
+DOCUOBSERVE
+
+END_DOCUOBSERVE
+
+
+DOCUINITIAL
+
+END_DOCUINITIAL
+
+
+EQ_FILE
+//#define EIGENLIB			// uncomment to use Eigen linear algebra library
+
+#include "fun_head_fast.h"
+
+// do not add Equations in this area
+
+MODELBEGIN
+
+EQUATION("A")
+// Produtividade
+/* 
+A produtividade da área plantada "A" depende do parâmetro "a" que representa a velocidade do aprendizado (ou velocidade de assimilação de conhecimento tecnológico. Quanto menor for este parâmetro, mais rápido será o aprendizado e maior a produtividade. 
+*/ 
+
+v[0] = V("a")*VL("A", 1) + (1 - V("a"))*V("Af") + norm(-100,100);
+
+if (v[0] > 15000) {
+    v[0] = 15000;
+}
+
+if (v[0] < 1000) {
+    v[0] = 1000;
+}
+
+RESULT(v[0]) //Pendência calibrar
+/*=================================ADDITION===========================*/
+EQUATION("AM")
+
+v[1]= AVE("A")
+/*=================================ADDITION===========================*/
+
+RESULT(v[1])
+
+EQUATION("Af")
+// Produtividade Final
+/* 
+"Af" define o aumento ou decréscimo da produtividade. Determina o limite da produtividade no final de cada simulação. O parâmetro "x" multiplica o grau de conhecimento tecnológico "T" e soma à produtividade final no tempo zero "A0" para cada agricultor.
+*/
+
+RESULT(V("x")*V("T") + V("A0"))
+
+EQUATION("T")
+// Grau de conhecimento tecnológico "T" 
+
+/* É função do estoque de conhecimento comparado à média do mercado. A taxa de crescimento do estoque de conhecimento "z" é dada pela variação do conhecimento no período presente e o anterior (derivada do estoque de conhecimento no tempo) */
+
+RESULT((V("z") - V("az"))/V("az"))
+
+
+EQUATION("az")
+// Average z
+STAT("z");
+RESULT(v[1])
+
+EQUATION("z")
+// Knowledge increase rate
+RESULT((V("Z") - VL("Z", 1))/VL("Z", 1))
+
+EQUATION("Z")
+// Estoque de conhecimento
+/* 
+O estoque de conhecimento "Z" é função do investimento do agricultor "I", da sua capacidade de absorção "g", do efeito spillover "t", do total de investimento realizado por outros produtores "SUM("I") e do conhecimento externo "E" 
+*/
+RESULT(V("I") + V("g")*(V("t")*(SUM("I") - V("I")) + V("E")))
+
+
+/////////////////////////BLOCO DE SELEÇÃO DA PROB///////////////////////////////////////////
+
+EQUATION("mksim")
+// Investment Market Share
+RESULT(VL("Im", 1)/SUML("I", 1))
+
+EQUATION("mksin")
+// Investment Market Share
+RESULT(VL("In", 1)/SUML("I", 1))
+
+
+
+EQUATION("PROB_IM")
+// Sucess Probability of Imitation
+v[0] = 1;
+v[1] = exp(-V("s")*V("Im"));
+v[2] = v[0] - v[1];
+v[3] = bernoulli(v[2]);
+RESULT(v[3])
+
+EQUATION("PROB_IN")
+// Sucess Probability of Innovation
+v[0] = 1;
+v[1] = exp(-V("s")*V("In"));
+v[2] = v[0] - v[1];
+v[3] = bernoulli(v[2]);
+RESULT(v[3])
+
+
+EQUATION("TESTE")
+RESULT(RND <= V("PROB_IM"))
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+EQUATION("TESTE")
+RESULT(exp(V("In")))
+
+
+
+EQUATION("g")
+// Capacidade de Absorção futura (Inn = 0 IMITATOR, Inn = 1 INNOVATOR)
+/*
+É função da capacidade de absorção passada ("g", 1), do investimento realizado "I", de um parâmetro "b" que especifica a complexidade do conhecimento assimilado e da depreciação da capacidade de absorção "Dp"
+
+*/
+
+v[0]=0;
+
+if (V("PROB_IM")==1)  
+{        
+if (V("PROB_IN")==0)
+{
+// Sucesso do Imitador 
+   v[0] = max(VL("g", 1),VL("gmean", 1)); 
+}
+
+if (V("PROB_IN")==1)
+{
+  v[0] = VL("g", 1) + V("b")/sqrt(VL("In", 1)) +  max(VL("g", 1),VL("gmean", 1));
+}
+}
+
+if (V("PROB_IM")==0)
+{
+if (V("PROB_IN")==0)
+{
+ v[0] = (min(VL("g", 1), VL("g", 1) + V("b")/sqrt(VL("Im", 1)) - V("Dp")) +  VL("g", 1) + (V("b")/sqrt(VL("In", 1))) - V("Dp"))/2;
+ 
+}
+
+if (V("PROB_IN")==1)
+{
+// Sucesso do Inovador
+   v[0] = VL("g", 1) + V("b")/sqrt(VL("In", 1));
+}
+}
+
+
+
+RESULT ( v[0] )
+
+
+
+EQUATION("gmean")
+// Farms AC average
+v[0] = 0;
+v[1] = 0;
+
+CYCLE(cur, "FARM")
+{
+v[0] = v[0] + VLS(cur, "g", 1);
+v[1] = v[1] + 1;
+}
+RESULT(v[0]/v[1])
+
+EQUATION("C")
+// Cost function
+RESULT(((V("CO")*(1-(V("f")*V("g"))) + V("I"))))
+
+EQUATION("p")
+// Profit function
+RESULT(V("REC") - V("C")) // alterado por wellington questão do C grande 
+
+
+EQUATION("REC") // ALTERADO PARA TER AS CONDIÇÕES INICIAIS DESCRITAS NA TESE DO AUTOR
+v[0]=V("price");
+v[1]=V("A");
+RESULT(v[0]*v[1])
+
+EQUATION("RECINV")
+RESULT(V("alpha")*VL("REC",1))
+
+EQUATION("RECIMIT")
+RESULT(V("beta")*VL("REC",1))
+
+///////////////bloco investimento//////////////////////
+
+EQUATION("In")
+// Investment function inovation
+RESULT(V("rin")*V("RECINV"))
+
+
+EQUATION("Im")
+// Investment function imitation
+RESULT(V("rim")*V("RECIMIT"))
+
+
+EQUATION("I")
+RESULT(V("In")+V("Im"))
+
+
+
+EQUATION("Am")
+// Farms AC average
+v[0] = 0;
+v[1] = 0;
+
+CYCLE(cur, "FARM")
+{
+v[0] = v[0] + VLS(cur, "A", 1);
+v[1] = v[1] + 1;
+}
+RESULT(v[0]/v[1])
+
+
+
+EQUATION("TESTE1")
+RESULT(V("AmFarm")>= V("Am"))
+
+
+EQUATION("AmFarm")
+v[1]=VL("A",1);
+v[2]=VL("A",2);
+v[3]=VL("A",3);
+v[4]=VL("A",4);
+v[5]=VL("A",5);
+v[6]=(v[1]+v[2]+v[3]+v[4]+v[5])/5;
+RESULT(v[6])
+
+
+
+
+EQUATION("rim")
+
+if (V("AmFarm")>= V("Am"))
+{ 
+v[7]=VL("rim",1); 
+
+} else { 
+
+v[8]=1;
+v[9]=100;
+v[10]=norm(0,0.015);
+v[7]=VL("rim",1)-v[10]; 
+}
+
+RESULT(v[7])
+
+
+
+EQUATION("rin")
+v[0]=VL("rim",1); ///// 
+RESULT(1-v[0])
+
+
+
+
+MODELEND
+
+// do not add Equations in this area
+
+void close_sim( void )
+{
+	// close simulation special commands go here
+	}
+
+END_EQ_FILE
