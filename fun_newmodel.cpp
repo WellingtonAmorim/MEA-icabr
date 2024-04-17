@@ -9,7 +9,7 @@ MODELBEGIN
 EQUATION("A")
 // Produtividade
 /* 
-A produtividade da ·rea plantada "A" depende do par‚metro "a" que representa a velocidade do aprendizado (ou velocidade de assimilaÁ„o de conhecimento tecnolÛgico. Quanto menor for este par‚metro, mais r·pido ser· o aprendizado e maior a produtividade. 
+A produtividade da √°rea plantada "A" depende do par√¢metro "a" que representa a velocidade do aprendizado (ou velocidade de assimila√ß√£o de conhecimento tecnol√≥gico. Quanto menor for este par√¢metro, mais r√°pido ser√° o aprendizado e maior a produtividade. 
 */ 
 
 v[0] = V("a")*VL("A", 1) + (1 - V("a"))*V("Af") + norm(-100,100);
@@ -22,7 +22,7 @@ if (v[0] < 1000) {
     v[0] = 1000;
 }
 
-RESULT(v[0]) //PendÍncia calibrar
+RESULT(v[0]) //Pend√™ncia calibrar
 /*=================================ADDITION===========================*/
 EQUATION("AM")
 
@@ -34,15 +34,15 @@ RESULT(v[1])
 EQUATION("Af")
 // Produtividade Final
 /* 
-"Af" define o aumento ou decrÈscimo da produtividade. Determina o limite da produtividade no final de cada simulaÁ„o. O par‚metro "x" multiplica o grau de conhecimento tecnolÛgico "T" e soma ‡ produtividade final no tempo zero "A0" para cada agricultor.
+"Af" define o aumento ou decr√©scimo da produtividade. Determina o limite da produtividade no final de cada simula√ß√£o. O par√¢metro "x" multiplica o grau de conhecimento tecnol√≥gico "T" e soma √† produtividade final no tempo zero "A0" para cada agricultor.
 */
 
 RESULT(V("x")*V("T") + V("A0"))
 
 EQUATION("T")
-// Grau de conhecimento tecnolÛgico "T" 
+// Grau de conhecimento tecnol√≥gico "T" 
 
-/* … funÁ„o do estoque de conhecimento comparado ‡ mÈdia do mercado. A taxa de crescimento do estoque de conhecimento "z" È dada pela variaÁ„o do conhecimento no perÌodo presente e o anterior (derivada do estoque de conhecimento no tempo) */
+/* √â fun√ß√£o do estoque de conhecimento comparado √† m√©dia do mercado. A taxa de crescimento do estoque de conhecimento "z" √© dada pela varia√ß√£o do conhecimento no per√≠odo presente e o anterior (derivada do estoque de conhecimento no tempo) */
 
 RESULT((V("z") - V("az"))/V("az"))
 
@@ -59,12 +59,12 @@ RESULT((V("Z") - VL("Z", 1))/VL("Z", 1))
 EQUATION("Z")
 // Estoque de conhecimento
 /* 
-O estoque de conhecimento "Z" È funÁ„o do investimento do agricultor "I", da sua capacidade de absorÁ„o "g", do efeito spillover "t", do total de investimento realizado por outros produtores "SUM("I") e do conhecimento externo "E" 
+O estoque de conhecimento "Z" √© fun√ß√£o do investimento do agricultor "I", da sua capacidade de absor√ß√£o "g", do efeito spillover "t", do total de investimento realizado por outros produtores "SUM("I") e do conhecimento externo "E" 
 */
 RESULT(V("I") + V("g")*(V("t")*(SUM("I") - V("I")) + V("E")))
 
 
-/////////////////////////BLOCO DE SELE«√O DA PROB///////////////////////////////////////////
+/////////////////////////BLOCO DE SELE√á√ÉO DA PROB///////////////////////////////////////////
 
 EQUATION("mksim")
 // Investment Market Share
@@ -75,7 +75,7 @@ EQUATION("mksin")
 RESULT(VL("In", 1)/SUML("I", 1))
 
 
-
+//inovar e imitar tem a mesma dificuldade, modular ou criar um outro parametro diferente de s
 EQUATION("PROB_IM")
 // Sucess Probability of Imitation
 v[0] = 1;
@@ -105,9 +105,9 @@ RESULT(exp(V("In")))
 
 
 EQUATION("g")
-// Capacidade de AbsorÁ„o futura (Inn = 0 IMITATOR, Inn = 1 INNOVATOR)
+// Capacidade de Absor√ß√£o futura (Inn = 0 IMITATOR, Inn = 1 INNOVATOR)
 /*
-… funÁ„o da capacidade de absorÁ„o passada ("g", 1), do investimento realizado "I", de um par‚metro "b" que especifica a complexidade do conhecimento assimilado e da depreciaÁ„o da capacidade de absorÁ„o "Dp"
+√â fun√ß√£o da capacidade de absor√ß√£o passada ("g", 1), do investimento realizado "I", de um par√¢metro "b" que especifica a complexidade do conhecimento assimilado e da deprecia√ß√£o da capacidade de absor√ß√£o "Dp"
 
 */
 
@@ -166,10 +166,10 @@ RESULT(((V("CO")*(1-(V("f")*V("g"))) + V("I"))))
 
 EQUATION("p")
 // Profit function
-RESULT(V("REC") - V("C")) // alterado por wellington quest„o do C grande 
+RESULT(V("REC") - V("C")) // alterado por wellington quest√£o do C grande 
 
 
-EQUATION("REC") // ALTERADO PARA TER AS CONDI«’ES INICIAIS DESCRITAS NA TESE DO AUTOR
+EQUATION("REC") // ALTERADO PARA TER AS CONDI√á√ïES INICIAIS DESCRITAS NA TESE DO AUTOR
 v[0]=V("price");
 v[1]=V("A");
 RESULT(v[0]*v[1])
@@ -229,15 +229,15 @@ RESULT(v[6])
 
 EQUATION("rim")
 
-if (V("AmFarm")>= V("Am"))
+if (V("AmFarm")>= V("Am")) 
 { 
 v[7]=VL("rim",1); 
 
-} else { 
+} else { // capacidade absortiva em t-1 menos a m√©dia / m√©dia (se a capacidade absortiva for inferior a m√©dia isso leva a um comportamento mais imitativo em rela√ß√£o ao inovativo. por outro lado, se for positivo ele tende a proporcionalmente direcionar os recursos para a atividade de inova√ß√£o// operacionaliza√ß√£o: criar um somat√≥rio no rim de forma a calcular a 
 
 v[8]=1;
 v[9]=100;
-v[10]=norm(0,0.015);
+v[10]=norm(0,0.015); // choque positivo ou negativo a depender da distancia da absortive capacity individual em rela√ß√£o a m√©dia.
 v[7]=VL("rim",1)-v[10]; 
 }
 
@@ -260,3 +260,4 @@ void close_sim( void )
 {
 	// close simulation special commands go here
 	}
+
