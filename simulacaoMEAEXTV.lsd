@@ -1,0 +1,652 @@
+	
+Label Root
+{
+	Son: FARM
+	Label FARM
+	{
+		Var: C
+		Var: A
+		Var: Af
+		Var: g
+		Var: I
+		Var: p
+		Var: PROB_IN
+		Var: Z
+		Param: a
+		Param: b
+		Param: CO
+		Param: Dp
+		Param: f
+		Param: price
+		Param: t
+		Param: x
+		Var: PROB_IM
+		Param: A0
+		Var: REC
+		Var: Im
+		Var: In
+		Param: s
+		Var: gmean
+		Param: rho1
+		Var: rin
+		Var: rim
+		Var: ADD
+		Param: alpha1
+		Param: beta1
+		Param: x1inf
+		Param: x1sup
+		Var: E
+		Param: u
+		Param: s1
+
+	}
+
+
+}
+
+
+DATA
+
+Object: Root C	1
+
+Object: FARM C	10
+Var: C 0 s + n n
+Var: A 7 s + n n	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0	500	0	0	0	0	0	0
+Var: Af 0 s + n n
+Var: g 1 s + n n	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Var: I 0 s + n n
+Var: p 6 s + n n	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0	300	0	0	0	0	0
+Var: PROB_IN 0 s + n n
+Var: Z 1 s + n n	350	350	350	350	350	350	350	350	350	350
+Param: a 0 n + n n	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2
+Param: b 0 n + n n	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8	0.8
+Param: CO 0 s + n n	330	330	330	330	330	330	330	330	330	330
+Param: Dp 0 n + n n	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25
+Param: f 0 s + n n	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2
+Param: price 0 n + n n	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21	0.21
+Param: t 0 n + n n	1	1	1	1	1	1	1	1	1	1
+Param: x 0 n + n n	350	350	350	350	350	350	350	350	350	350
+Var: PROB_IM 0 s + n n
+Param: A0 0 n + n n	3000	3000	3000	3000	3000	3000	3000	3000	3000	3000
+Var: REC 1 s + n n	1000	1000	1000	1000	1000	1000	1000	1000	1000	1000
+Var: Im 1 s + n n	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Var: In 1 s + n n	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Param: s 0 s + n n	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03
+Var: gmean 2 s + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Param: rho1 0 s + n n	1	1	1	1	1	1	1	1	1	1
+Var: rin 0 s + n n
+Var: rim 1 s + n n	0	0	0	0	0	0	0	0	0	0
+Var: ADD 1 s + n n	1	1	1	1	1	1	1	1	1	1
+Param: alpha1 0 n + n n	1	1	1	1	1	1	1	1	1	1
+Param: beta1 0 n + n n	1	1	1	1	1	1	1	1	1	1
+Param: x1inf 0 n + n n	-0.15	-0.15	-0.15	-0.15	-0.15	-0.15	-0.15	-0.15	-0.15	-0.15
+Param: x1sup 0 n + n n	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15
+Var: E 0 s + n n
+Param: u 0 n + n n	-7.29045991406439	6.70017179989159	9.37735542248463	-5.5793191403459	-3.83665898985993	0.944411927357038	-6.23236047905638	9.85762603835613	9.92922651096017	9.35389874021005
+Param: s1 0 s + n n	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03
+
+SIM_NUM 100
+SEED 1
+MAX_STEP 2000
+EQUATION fun_newmodelV.cpp
+MODELREPORT report_simulacaoMEAEXTV.html
+
+DESCRIPTION
+
+Object_Root
+
+END_DESCRIPTION
+
+Object_FARM
+
+END_DESCRIPTION
+
+Variable_C
+Cost function
+END_DESCRIPTION
+
+Variable_A
+Produtividade
+ 
+A produtividade da área plantada "A" depende do parâmetro "a" que representa a velocidade do aprendizado (ou velocidade de assimilação de conhecimento tecnológico. Quanto menor for este parâmetro, mais rápido será o aprendizado e maior a produtividade.
+Produtividade
+ 
+A produtividade da área plantada "A" depende do parâmetro "a" que representa a velocidade do aprendizado (ou velocidade de assimilação de conhecimento tecnológico. Quanto menor for este parâmetro, mais rápido será o aprendizado e maior a produtividade.
+'A' appears in the equation for: A, p, I
+_INIT_
+All 1000 instances equal to 500
+END_DESCRIPTION
+
+Variable_Af
+Produtividade Final
+ 
+"Af" define o aumento ou decréscimo da produtividade. Determina o limite da produtividade no final de cada simulação. O parâmetro "x" multiplica o grau de conhecimento tecnológico "T" e soma à produtividade final no tempo zero "A0" para cada agricultor.
+END_DESCRIPTION
+
+Variable_g
+Capacidade de Absorção futura (Inn = 0 IMITATOR, Inn = 1 INNOVATOR)
+É função da capacidade de absorção passada ("g", 1), do investimento realizado "I", de um parâmetro "b" que especifica a complexidade do conhecimento assimilado e da depreciação da capacidade de absorção "Dp"
+_INIT_
+All 100 instances equal to 0.3
+END_DESCRIPTION
+
+Variable_I
+Investment function
+END_DESCRIPTION
+
+Variable_p
+Profit function
+_INIT_
+All 100 instances equal to 300
+END_DESCRIPTION
+
+Variable_PROB_IN
+Sucess Probability of Innovation
+END_DESCRIPTION
+
+Variable_Z
+Estoque de conhecimento
+ 
+O estoque de conhecimento "Z" é função do investimento do agricultor "I", da sua capacidade de absorção "g", do efeito spillover "t", do total de investimento realizado por outros produtores "SUM("I") e do conhecimento externo "E"
+_INIT_
+All 100 instances equal to 350
+END_DESCRIPTION
+
+Parameter_a
+
+_INIT_
+All 10 instances equal to 0.2
+END_DESCRIPTION
+
+Parameter_b
+
+_INIT_
+All 100 instances equal to 0.8
+END_DESCRIPTION
+
+Parameter_CO
+
+_INIT_
+All 1 instances equal to 330
+END_DESCRIPTION
+
+Parameter_Dp
+
+_INIT_
+All 100 instances equal to 0.25
+END_DESCRIPTION
+
+Parameter_f
+
+_INIT_
+All 10 instances equal to 0.2
+END_DESCRIPTION
+
+Parameter_price
+
+_INIT_
+All 1 instances equal to 0.21
+END_DESCRIPTION
+
+Parameter_t
+
+_INIT_
+All 100 instances equal to 1
+END_DESCRIPTION
+
+Parameter_x
+
+_INIT_
+All 1 instances equal to 350
+END_DESCRIPTION
+
+Variable_PROB_IM
+Sucess Probability of Imitation
+END_DESCRIPTION
+
+Parameter_A0
+
+_INIT_
+All 10 instances equal to 3000
+END_DESCRIPTION
+
+Variable_REC
+
+_INIT_
+All 10 instances equal to 1000
+END_DESCRIPTION
+
+Variable_Im
+Investment function imitation
+_INIT_
+All 100 instances equal to 0.3
+END_DESCRIPTION
+
+Variable_In
+Investment function inovation
+_INIT_
+All 100 instances equal to 0.3
+END_DESCRIPTION
+
+Parameter_s
+
+_INIT_
+All 10 instances equal to 0.03
+END_DESCRIPTION
+
+Variable_gmean
+Farms AC average
+END_DESCRIPTION
+
+Parameter_rho1
+
+_INIT_
+All 10 instances equal to 1
+END_DESCRIPTION
+
+Variable_rin
+
+END_DESCRIPTION
+
+Variable_rim
+
+END_DESCRIPTION
+
+Variable_ADD
+
+_INIT_
+All 10 instances equal to 1
+END_DESCRIPTION
+
+Parameter_alpha1
+
+_INIT_
+All 10 instances equal to 1
+END_DESCRIPTION
+
+Parameter_beta1
+
+_INIT_
+All 10 instances equal to 1
+END_DESCRIPTION
+
+Parameter_x1inf
+
+_INIT_
+All 10 instances equal to -0.15
+END_DESCRIPTION
+
+Parameter_x1sup
+
+_INIT_
+All 10 instances equal to 0.15
+END_DESCRIPTION
+
+Variable_E
+
+END_DESCRIPTION
+
+Parameter_u
+
+_INIT_
+All 10 instances drawn from uniform distribution between -10 and 10
+END_DESCRIPTION
+
+Parameter_s1
+
+_INIT_
+All 10 instances equal to 0.03
+END_DESCRIPTION
+
+
+DOCUOBSERVE
+
+END_DOCUOBSERVE
+
+
+DOCUINITIAL
+
+END_DOCUINITIAL
+
+
+EQ_FILE
+//#define EIGENLIB			// uncomment to use Eigen linear algebra library
+
+#include "fun_head_fast.h"
+
+// do not add Equations in this area
+
+MODELBEGIN
+
+
+
+
+
+
+
+
+
+EQUATION("A")
+// Produtividade
+/* 
+A produtividade da área plantada "A" depende do parâmetro "a" que representa a velocidade do aprendizado (ou velocidade de assimilação de conhecimento tecnológico. Quanto menor for este parâmetro, mais rápido será o aprendizado e maior a produtividade. 
+*/ 
+
+v[0] = V("a")*VL("A", 1) + (1 - V("a"))*V("Af")+ V("u");
+
+
+
+RESULT(v[0]) 
+
+
+EQUATION("Af")
+// Produtividade Final
+/* 
+"Af" define o aumento ou decréscimo da produtividade. Determina o limite da produtividade no final de cada simulação. O parâmetro "x" multiplica o grau de conhecimento tecnológico "T" e soma à produtividade final no tempo zero "A0" para cada agricultor.
+*/
+
+RESULT(V("x")*V("Z") + V("A0"))
+
+
+
+
+
+EQUATION("Z")
+// Estoque de conhecimento
+/* 
+O estoque de conhecimento "Z" é função do investimento do agricultor "I", da sua capacidade de absorção "g", do efeito spillover "t", do total de investimento realizado por outros produtores "SUM("I") e do conhecimento externo "E" 
+*/
+v[1]= V("I");
+v[2]= V("g");
+v[3]= V("t");
+v[4]= SUM("I");
+v[5]= v[4]-v[1];
+v[6]= V("E");
+v[7]=v[3]*v[5];
+v[8]= v[1] + v[2]*(v[7]+v[6]);
+
+RESULT( v[8] )
+/*=================================ADDITION===========================*/
+/*
+EQUATION("E")
+
+if (T<200)
+{
+v[0]= 250 + norm(100,10);
+}
+
+if (T>200)
+{
+v[0]= 275+norm(100,10);
+}
+
+if (T>400)
+{
+v[0]=300+ norm(100,10);
+}
+
+if (T>600)
+{
+v[0]=400+ norm(10,10);
+}
+
+if (T>800)
+{
+v[0]=350+ norm(100,10);
+}
+
+if (T>900)
+{
+v[0]=500+ norm(100,10);
+}
+
+if (T>1000)
+{
+v[0]=575+norm(100,10);
+}
+
+if (T>1100)
+{
+v[0]= 395+norm(100,10);
+}
+
+if (T>1200)
+{
+v[0]= 435+norm(100,10);
+}
+if (T>1400)
+{
+v[0]= 300+norm(100,10);
+}
+
+if (T>1600)
+{
+v[0]= 375+norm(100,10);
+}
+
+if (T>1700)
+{
+v[0]=500+norm(100,10);
+}
+
+
+
+RESULT ( v[0] ) 
+*/
+
+EQUATION ("E")
+
+RESULT ( 500 )
+
+
+
+
+
+
+/////////////////////////BLOCO DE SELEÇÃO DA PROB///////////////////////////////////////////
+
+
+//inovar e imitar tem a mesma dificuldade, modular ou criar um outro parametro diferente de s
+EQUATION("PROB_IM")
+// Sucess Probability of Imitation
+v[0] = 1;
+v[1] = exp(-V("s")*V("Im"));
+v[2] = v[0] - v[1];
+v[3] = bernoulli(v[2]);
+RESULT(v[3])
+
+EQUATION("PROB_IN")
+// Sucess Probability of Innovation
+v[0] = 1;
+v[1] = exp(-V("s")*V("In"));
+v[2] = v[0] - v[1];
+v[3] = bernoulli(v[2]);
+RESULT(v[3])
+
+
+
+
+
+
+EQUATION("g")
+// Capacidade de Absorção futura (Inn = 0 IMITATOR, Inn = 1 INNOVATOR)
+/*
+É função da capacidade de absorção passada ("g", 1), do investimento realizado "I", de um parâmetro "b" que especifica a complexidade do conhecimento assimilado e da depreciação da capacidade de absorção "Dp"
+
+*/
+
+v[0]=0;
+
+if (V("PROB_IM")==1)  
+{        
+if (V("PROB_IN")==0)
+{
+// Sucesso do Imitador 
+   v[0] = max(VL("g", 1),VL("gmean", 1)); 
+}
+
+if (V("PROB_IN")==1)
+{
+  v[0] = VL("g", 1) + V("b")/sqrt(VL("In", 1)) + V("ADD");
+}
+}
+
+if (V("PROB_IM")==0)
+{
+if (V("PROB_IN")==0)
+{
+ v[0] = (min(VL("g", 1), VL("g", 1) + V("b")/sqrt(VL("Im", 1)) - V("Dp")) +  VL("g", 1) + (V("b")/sqrt(VL("In", 1))) - V("Dp"))/2;
+ 
+}
+
+if (V("PROB_IN")==1)
+{
+// Sucesso do Inovador
+   v[0] = VL("g", 1) + V("b")/sqrt(VL("In", 1)) + V("ADD")/VL("ADD",1);
+}
+}
+
+
+
+RESULT ( v[0] )
+
+
+
+EQUATION("ADD")
+
+
+ v[5]= VL("g",1);							//previous period productivity
+
+
+v[1]=  V( "x1inf" );		// lower beta inno. draw support
+v[2]=  V( "x1sup" );		// upper beta inno. draw support
+v[3]=  V( "alpha1" );		// beta distrib. alpha parameter
+v[4]=  V( "beta1" );		// beta distrib. beta parameter
+
+	// new final productivity (A) from innovation
+	v[0] = v[5] * ( 1 + v[1] + beta( v[3], v[4]) * ( v[2] - v[1] ) );
+	
+RESULT ( v[0] )
+
+
+EQUATION("C")
+// Cost function
+RESULT(((V("CO")*(1-(V("f")*V("g"))) + V("I"))))
+
+EQUATION("p")
+// Profit function
+RESULT(V("REC") - V("C")) // alterado por wellington questão do C grande 
+
+
+EQUATION("REC") // ALTERADO PARA TER AS CONDIÇÕES INICIAIS DESCRITAS NA TESE DO AUTOR
+v[0]=V("price");
+v[1]=V("A");
+RESULT(v[0]*v[1])
+
+
+
+///////////////bloco investimento//////////////////////
+
+EQUATION("In")
+// Investment function inovation
+RESULT(V("rin")*(VL("REC",1)*0,3))
+
+
+EQUATION("Im")
+// Investment function imitation
+RESULT(V("rim")*(VL("REC",1)*0,3))
+
+
+EQUATION ("rin")
+RESULT (1 - V("rim"))
+
+
+EQUATION("rim")
+
+v[11]= VL("A",1);
+v[12]= VL("A",2);
+v[13]= VL("A",3);
+v[14]= VL("A",4);
+v[15]= VL("A",5);
+v[16]= VL("A",6);
+v[17]= VL("A",7);
+
+v[18]= v[11]-v[12]/v[12];
+v[19]= v[12]-v[13]/v[13];
+v[20]= v[14]-v[15]/v[15];
+v[21]= v[16]-v[15]/v[16];
+v[22]= v[16]-v[17]/v[17];
+
+v[23]= v[18]+v[19]+v[20]+v[21]+v[22]/5;
+
+if (VL("rim",1)>0)
+{
+if (v[23]<0)
+{ 
+
+v[1] = 1;
+v[2] = exp(-V("s1")*v[0]);
+v[4] = v[1] - v[2];
+v[5] = bernoulli(v[4]);
+
+if (bernoulli (v[4]))
+{
+
+v[3]= VL("rim",1) - norm(0,0.015) ;
+
+}
+else
+{
+v[3]= VL("rim",1);
+}
+}
+
+if (v[23]>0)
+{ 
+v[3]= VL("rim",1);
+}
+}
+
+if (VL("rim",1)==0)
+{
+v[3]=VL("rim",1);
+}
+
+
+RESULT(v[3])
+
+
+
+
+EQUATION("I")
+RESULT(V("In")+V("Im"))
+
+
+ 
+
+EQUATION("gmean")
+// Farms AC average
+v[0] = 0;
+v[1] = 0;
+
+CYCLE(cur, "FARM")
+{
+v[0] = v[0] + VLS(cur, "g", 1);
+v[1] = v[1] + 1;
+}
+RESULT(v[0]/v[1])
+
+
+
+
+
+MODELEND
+
+// do not add Equations in this area
+
+void close_sim( void )
+{
+	// close simulation special commands go here
+	}
+
+END_EQ_FILE
