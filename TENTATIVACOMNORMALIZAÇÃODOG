@@ -1,0 +1,372 @@
+//#define EIGENLIB			// uncomment to use Eigen linear algebra library
+
+#include "fun_head_fast.h"
+
+// do not add Equations in this area
+
+MODELBEGIN
+
+
+
+
+
+
+
+
+
+EQUATION("A")
+// Produtividade
+/* 
+A produtividade da área plantada "A" depende do parâmetro "a" que representa a velocidade do aprendizado (ou velocidade de assimilação de conhecimento tecnológico. Quanto menor for este parâmetro, mais rápido será o aprendizado e maior a produtividade. 
+*/ 
+
+v[0] = V("a")*VL("A", 1) + (1 - V("a"))*V("Af")+ V("u");
+
+
+
+RESULT(v[0]) 
+
+
+EQUATION("Af")
+// Produtividade Final
+/* 
+"Af" define o aumento ou decréscimo da produtividade. Determina o limite da produtividade no final de cada simulação. O parâmetro "x" multiplica o grau de conhecimento tecnológico "T" e soma à produtividade final no tempo zero "A0" para cada agricultor.
+*/
+
+RESULT(V("x")*V("T") + V("A0"))
+
+
+
+EQUATION("T")
+// Grau de conhecimento tecnológico "T" 
+
+/* É função do estoque de conhecimento comparado à média do mercado. A taxa de crescimento do estoque de conhecimento "z" é dada pela variação do conhecimento no período presente e o anterior (derivada do estoque de conhecimento no tempo) */
+
+RESULT((V("z") - V("az"))/V("az"))
+
+
+EQUATION("az")
+// Average z
+STAT("z");
+RESULT(v[1])
+
+EQUATION("z")
+// Knowledge increase rate
+RESULT((V("Z") - VL("Z", 1))/VL("Z", 1))
+
+
+EQUATION("Z")
+// Estoque de conhecimento
+/* 
+O estoque de conhecimento "Z" é função do investimento do agricultor "I", da sua capacidade de absorção "gnorm", do efeito spillover "t", do total de investimento realizado por outros produtores "SUM("I") e do conhecimento externo "E" 
+*/
+v[1]= V("I");
+v[2]= V("gnorm");
+v[3]= V("t");
+v[4]= SUM("I");
+v[5]= v[4]-v[1];
+v[6]= V("E");
+v[7]=v[3]*v[5];
+v[8]= v[1] + v[2]*(v[7]+v[6]);
+
+RESULT( v[8] )
+/*=================================ADDITION===========================*/
+/*
+EQUATION("E")
+
+if (T<200)
+{
+v[0]= 250 + norm(100,10);
+}
+
+if (T>200)
+{
+v[0]= 275+norm(100,10);
+}
+
+if (T>400)
+{
+v[0]=300+ norm(100,10);
+}
+
+if (T>600)
+{
+v[0]=400+ norm(10,10);
+}
+
+if (T>800)
+{
+v[0]=350+ norm(100,10);
+}
+
+if (T>900)
+{
+v[0]=500+ norm(100,10);
+}
+
+if (T>1000)
+{
+v[0]=575+norm(100,10);
+}
+
+if (T>1100)
+{
+v[0]= 395+norm(100,10);
+}
+
+if (T>1200)
+{
+v[0]= 435+norm(100,10);
+}
+if (T>1400)
+{
+v[0]= 300+norm(100,10);
+}
+
+if (T>1600)
+{
+v[0]= 375+norm(100,10);
+}
+
+if (T>1700)
+{
+v[0]=500+norm(100,10);
+}
+
+
+
+RESULT ( v[0] ) 
+*/
+
+
+
+
+
+/////////////////////////BLOCO DE SELEÇÃO DA PROB///////////////////////////////////////////
+
+
+//inovar e imitar tem a mesma dificuldade, modular ou criar um outro parametro diferente de s
+EQUATION("PROB_IM")
+// Sucess Probability of Imitation
+v[0] = 1;
+v[1] = exp(-V("s1")*V("Im"));
+v[2] = v[0] - v[1];
+v[3] = bernoulli(v[2]);
+RESULT(v[3])
+
+EQUATION("PROB_IN")
+// Sucess Probability of Innovation
+v[0] = 1;
+v[1] = exp(-V("s")*V("In"));
+v[2] = v[0] - v[1];
+v[3] = bernoulli(v[2]);
+RESULT(v[3])
+
+
+
+
+ EQUATION("g")
+// Capacidade de Absorção futura (Inn = 0 IMITATOR, Inn = 1 INNOVATOR)
+/*
+É função da capacidade de absorção passada ("gnorm", 1), do investimento realizado "I", de um parâmetro "b" que especifica a complexidade do conhecimento assimilado e da depreciação da capacidade de absorção "Dp"
+
+*/
+
+v[0]=0;
+
+if (V("PROB_IM")==1)  
+{        
+if (V("PROB_IN")==0)
+{
+// Sucesso do Imitador 
+   v[0] = max(VL("g", 1),VL("gmean", 1)); 
+}
+
+if (V("PROB_IN")==1)
+{
+  v[0] = VL("g", 1) + V("b")/sqrt(VL("In", 1)) + V("ADD");
+}
+}
+
+if (V("PROB_IM")==0)
+{
+if (V("PROB_IN")==0)
+{
+ v[0] = (min(VL("g", 1), VL("g", 1) + V("b")/sqrt(VL("Im", 1)) - V("Dp")) +  VL("g", 1) + (V("b")/sqrt(VL("In", 1))) - V("Dp"))/2;
+ 
+}
+
+if (V("PROB_IN")==1)
+{
+// Sucesso do Inovador
+   v[0] = VL("g", 1) + V("b")/sqrt(VL("In", 1)) + V("ADD")/VL("ADD",1);
+}
+}
+
+
+
+RESULT (v[0])
+
+
+
+
+
+
+
+EQUATION("gnorm")
+v[0]=V("g");
+v[1]=V("gmean");
+v[2]=SD("g");
+RESULT((v[0]-v[1])/v[2])
+
+
+EQUATION("ADD")
+
+
+ v[5]= VL("gnorm",1);							//previous period productivity
+
+
+v[1]=  V( "x1inf" );		// lower beta inno. draw support
+v[2]=  V( "x1sup" );		// upper beta inno. draw support
+v[3]=  V( "alpha1" );		// beta distrib. alpha parameter
+v[4]=  V( "beta1" );		// beta distrib. beta parameter
+
+	// new final productivity (A) from innovation
+	v[0] = v[5] * ( 1 + v[1] + beta( v[3], v[4]) * ( v[2] - v[1] ) );
+	
+RESULT ( v[0] )
+
+
+EQUATION("C")
+// Cost function
+RESULT(((V("CO")*(1-(V("f")*V("gnorm"))) + V("I"))))
+
+EQUATION("p")
+// Profit function
+RESULT(V("REC") - V("C")) // alterado por wellington questão do C grande 
+
+
+EQUATION("REC") // ALTERADO PARA TER AS CONDIÇÕES INICIAIS DESCRITAS NA TESE DO AUTOR
+v[0]=V("price");
+v[1]=V("A");
+RESULT(v[0]*v[1])
+
+
+
+///////////////bloco investimento//////////////////////
+
+//EQUATION("In")
+// Investment function inovation
+//
+
+EQUATION("Im")
+// Investment function imitation
+RESULT(V("rim")*(VL("I",1)))
+
+
+EQUATION ("rin")
+RESULT (1 - V("rim"))
+
+// EQUATION("rim")
+// v[11]= VL("A",1);
+// v[12]= VL("A",2);
+// v[13]= VL("A",3);
+// v[14]= VL("A",4);
+// v[15]= VL("A",5);
+// v[16]= VL("A",6);
+// v[17]= VL("A",7);
+
+// v[18]= v[11]-v[12]/v[12];
+// v[19]= v[12]-v[13]/v[13];
+// v[20]= v[14]-v[15]/v[15];
+// v[21]= v[16]-v[15]/v[16];
+// v[22]= v[16]-v[17]/v[17];
+
+// v[23]= v[18]+v[19]+v[20]+v[21]+v[22]/5;
+
+// if (VL("rim",1)>0)
+// {
+// if (v[23]<0)
+// { 
+
+// v[1] = 1;
+// v[2] = exp(-V("s1")*v[0]);
+// v[4] = v[1] - v[2];
+// v[5] = bernoulli(v[4]);
+
+// if (bernoulli (v[4]))
+// {
+
+// v[3]= VL("rim",1) - norm(0,0.015) ;
+
+// }
+// else
+// {
+// v[3]= VL("rim",1);
+// }
+// }
+
+// if (v[23]>0)
+// { 
+// v[3]= VL("rim",1);
+// }
+// }
+
+// if (VL("rim",1)==0)
+// {
+// v[3]=VL("rim",1);
+// }
+
+
+// RESULT(v[3])
+
+
+
+
+// EQUATION("I")
+// RESULT(V("In")+V("Im"))
+
+EQUATION("I")
+RESULT(0.15*VL("p",1))
+
+EQUATION("gmean")
+// Farms AC average
+v[0] = 0;
+v[1] = 0;
+
+CYCLE(cur, "FARM")
+{
+v[0] = v[0] + VLS(cur, "gnorm", 1);
+v[1] = v[1] + 1;
+}
+RESULT(v[0]/v[1])
+
+EQUATION("REC2")
+v[0]= VL("REC",1);
+v[1]= V("rho");
+
+v[2]= v[0]*v[1];
+RESULT( v[2] ) 
+
+EQUATION("In")
+// Investment function inovation
+RESULT(V("rin")*VL("I",1))
+
+
+EQUATION("E")
+v[0]=0;
+RESULT(v[0])
+
+
+
+
+
+
+MODELEND
+
+// do not add Equations in this area
+
+void close_sim( void )
+{
+	// close simulation special commands go here
+	}
